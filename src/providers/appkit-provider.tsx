@@ -12,7 +12,7 @@ const queryClient = new QueryClient();
 const projectId = '0145104ef1bdaabe0414ea54d9b57109';
 
 // Define the BSC network configuration
-const bscNetwork = {
+/* const bscNetwork = {
 	id: 56,
 	name: 'Binance Smart Chain',
 	network: 'bsc',
@@ -27,7 +27,7 @@ const bscNetwork = {
 		symbol: 'BNB',
 		decimals: 18,
 	},
-};
+}; */
 
 const wagmiAdapter = new WagmiAdapter({
 	networks: [bsc],

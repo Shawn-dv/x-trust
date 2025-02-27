@@ -32,7 +32,7 @@ export default function SmartContractPageView() {
         </Typography>
 
         <ul className="list-disc pl-8 mb-4">
-          {t("xTrustOperations", { returnObjects: true }).map(
+          {(t("xTrustOperations", { returnObjects: true }) as string[]).map(
             (operation: string, index: number) => (
               <li key={index}>{operation}</li>
             )
@@ -44,11 +44,11 @@ export default function SmartContractPageView() {
         </Typography>
 
         <ul className="list-disc pl-8 mb-4">
-          {t("smartContractGuarantees", { returnObjects: true }).map(
-            (guarantee: string, index: number) => (
-              <li key={index}>{guarantee}</li>
-            )
-          )}
+          {(
+            t("smartContractGuarantees", { returnObjects: true }) as string[]
+          ).map((guarantee: string, index: number) => (
+            <li key={index}>{guarantee}</li>
+          ))}
         </ul>
 
         <Typography variant="body1" className="mb-4">

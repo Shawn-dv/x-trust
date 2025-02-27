@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { BrowserProvider, Contract, JsonRpcProvider } from 'ethers';
+import { BrowserProvider, JsonRpcProvider } from 'ethers';
 import toast from 'react-hot-toast';
 
 type LoadingKeys =
@@ -19,13 +19,13 @@ interface XTrustStore {
 	// amIOwner: () => Promise<boolean>;
 }
 
-function unwrapProxies(proxyArray: any[]) {
+/* function unwrapProxies(proxyArray: any[]) {
 	return proxyArray.map((proxy) => ({ ...proxy }));
 }
 
 function unwrapNormalProxies(proxyArray: any[]) {
 	return Array.from(proxyArray).map((item: any) => item.toString());
-}
+} */
 
 // Instead of directly referencing window.ethereum,
 // you can pass your 'walletProvider' from AppKit into this function.
@@ -37,8 +37,10 @@ export function createXTrustStore(walletProvider: any) {
 		provider = new JsonRpcProvider('https://bsc-dataseed.binance.org');
 	}
 
+	console.log(typeof provider)
+
 	// 2) Return a Zustand store that uses this `provider`
-	return create<XTrustStore>((set, get) => ({
+	return create<XTrustStore>((set) => ({
 		loading: { global: false } as Record<LoadingKeys, boolean>,
 		// Instantiate the contracts with your own environment variables
 		/* poolContract: new Contract(
