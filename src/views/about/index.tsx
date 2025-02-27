@@ -65,7 +65,7 @@ export default function AboutPageView() {
           </p>
         </div>
       </div>
-      <section className="flex flex-wrap gap-[5rem] justify-center w-full">
+      <section className="flex flex-wrap gap-[2rem] md:gap-[5rem] justify-center w-full">
         <InfoItem
           title={t("investment-opportunities")}
           desc={t("investment-opportunities-desc")}

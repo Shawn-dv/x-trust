@@ -63,5 +63,32 @@
   "terms-withdrawalProcess": "🔵 Withdrawal Process: At the time of withdrawal, the system automatically transfers the requested amount to the user's account based on the available cryptocurrencies. Users are advised to manually convert their funds to USDT on decentralized exchanges to avoid slippage.",
   "terms-securityTips": "🔵 Security Tips: Always maintain a safety margin in your investments and avoid investing amounts critical to your livelihood.",
   "terms-securityNotices": "🔵 Security Notices: Security tips will be highlighted with a 🔴 symbol. Please pay attention to these notices.",
-  "terms-stayUpdated": "🔵 Stay Updated: Join the xTrust Telegram channel or follow the xTrust page on X (formerly Twitter) for the latest updates."
+  "terms-stayUpdated": "🔵 Stay Updated: Join the xTrust Telegram channel or follow the xTrust page on X (formerly Twitter) for the latest updates.",
+
+  "smartContractOverview": "Smart Contract Overview",
+  "smartContractDescription": "A Smart Contract is an advanced technology related to blockchain development. It allows you to leverage the benefits of blockchain, such as decentralization, transparency, immutability, verifiability, availability, and security, for computer programs. In this technology, your computer program, consisting of a set of data and functions, is recorded on the blockchain. Any user with permission can execute the desired functions, store data on the blockchain, or transfer cryptocurrencies into or out of the program.",
+  "smartContractHistory": "Smart Contract technology was first fully implemented in 2015 by Vitalik Buterin on the Ethereum blockchain and has since seen significant advancements.",
+  "xTrustSmartContract": "xTrust Smart Contract",
+  "xTrustDescription": "xTrust has registered all its operations on a single smart contract. This smart contract can perform the following main operations:",
+  "xTrustOperations": [
+    "Deposit investor funds in USDT into the smart contract.",
+    "Perform trades using the decentralized exchange Pancake Swap V2.",
+    "Calculate investor profits.",
+    "Repay profits or capital to investors."
+  ],
+  "smartContractEnsures": "The smart contract ensures:",
+  "smartContractGuarantees": [
+    "All deposit, withdrawal, and trade operations are fully transparent.",
+    "Users can only deposit funds into their own accounts and withdraw from the same account.",
+    "The trading team can only trade specific pre-defined tokens.",
+    "The trading team cannot transfer funds outside the Pancake Swap V2 exchange."
+  ],
+  "xTrustDeployed": "The xTrust smart contract is deployed on the BNB Smart Chain at the following address:",
+  "contractAddress": "0xCE7de646e7208a4Ef112cb6ed5038FA6cC6b12e3",
+  "greenTickDescription": "The smart contract has a green tick, indicating that the provided code matches the source code registered on the BNB blockchain.",
+  "supportedTokens": "Supported Tokens",
+  "tradesDescription": "All trades are conducted between the above tokens and USDT on the BNB Smart Chain at the address:",
+  "usdtAddress": "0x55d398326f99059fF775485246999027B3197955",
+  "consultExpert": "You can consult a smart contract expert to review the full xTrust smart contract code to ensure its complete security and prevent any misuse.",
+  "viewOnBscScan": "View Smart Contract on BscScan"
 }
