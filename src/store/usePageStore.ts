@@ -43,7 +43,7 @@ interface PageStore {
 export const usePageStore = create<PageStore>(() => ({
   pages: [
     {
-      route: "/",
+      route: "/x-trust",
       title: "home",
       key: PageKeys.Home,
       component: MainPageView,
