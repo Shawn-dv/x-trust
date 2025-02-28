@@ -6,9 +6,11 @@
   "home-introduction-desc": "xTrust is a secure investment system for cryptocurrency trading using smart contracts. Here, you invest in the xTrust smart contract with the Tether cryptocurrency. xTrust traders use highly precise analyses to trade with your investment. You can monitor the status of your investment at any time through your user panel. Additionally, you can withdraw any amount of your investment at any time and transfer it to your wallet. Furthermore, by introducing other users to the system, you can share in their profits.",
 
   "more": "More",
-
   "copy-right": "xTrust. All rights reserved.",
 
+  "withdraw": "Withdraw",
+  "information": "Information",
+  "invest": "Invest",
   "start-invest": "Start Invest",
   "about": "About",
   "terms": "Terms and Conditions",
@@ -48,22 +50,22 @@
   "user-benefits-desc": "Monitor your investments 24/7 and enjoy the flexibility of instant fund withdrawals and profit sharing through referrals.",
 
   "terms-termsDescription": "Every user of the system, by investing in this smart contract, agrees to the following terms:",
-  "terms-investmentWithdrawal": "🔵 Investment and Withdrawal: Users can invest any amount at any time and withdraw their capital or any portion of their profits from the system.",
-  "terms-userResponsibility": "🔵 User Responsibility: Each user is personally responsible for protecting their capital. If a user disagrees with the trading team's methods at any stage, they can withdraw their funds.",
-  "terms-systemFees": "🔵 System Fees:",
+  "terms-investmentWithdrawal": "Investment and Withdrawal: Users can invest any amount at any time and withdraw their capital or any portion of their profits from the system.",
+  "terms-userResponsibility": "User Responsibility: Each user is personally responsible for protecting their capital. If a user disagrees with the trading team's methods at any stage, they can withdraw their funds.",
+  "terms-systemFees": "System Fees:",
   "terms-noFeesUpTo300": "No fees will be charged for growth up to 300% of the user's investment.",
   "terms-feesAbove300": "For growth exceeding 300%, the system will automatically deduct 50% of the growth above 300% at the time of withdrawal.",
   "terms-referrerFee": "From the 50% deducted, 1% will be transferred to the referrer's account, and the remaining 49% will be transferred to the trading team and system founder.",
-  "terms-example": "🔵 Example: If a user invests 1000 USDT and their investment grows to 5000 USDT, no fees apply to the first 3000 USDT. For the remaining 2000 USDT, 1000 USDT (50%) will be deducted. From this, 20 USDT goes to the referrer, and 980 USDT goes to the trading team.",
-  "terms-partialWithdrawal": "🔵 Partial Withdrawal: Fees are only deducted at the time of withdrawal and only from the withdrawn amount. For example, if a user withdraws 1000 USDT from 5000 USDT, 200 USDT will be deducted, with 4 USDT going to the referrer and 196 USDT to the trading team.",
-  "terms-additionalInvestments": "🔵 Additional Investments: Users can increase their investment at any time, but the growth calculation is based on their initial investment.",
-  "terms-currencyAndNetwork": "🔵 Currency and Network: Investments are only accepted in USDT on the BNB network. The system is not responsible for other cryptocurrencies sent by mistake.",
-  "terms-smartContractMethods": "🔵 Smart Contract Methods: USDT must be invested using the smart contract methods provided on this site. Direct transfers to the xTrust smart contract are not supported, and the system is not responsible for such transfers.",
-  "terms-tradingOperations": "🔵 Trading Operations: All trading operations are conducted on PancakeSwap V2. A limited list of cryptocurrencies is used for trading, as listed on the smart contract page.",
-  "terms-withdrawalProcess": "🔵 Withdrawal Process: At the time of withdrawal, the system automatically transfers the requested amount to the user's account based on the available cryptocurrencies. Users are advised to manually convert their funds to USDT on decentralized exchanges to avoid slippage.",
-  "terms-securityTips": "🔵 Security Tips: Always maintain a safety margin in your investments and avoid investing amounts critical to your livelihood.",
-  "terms-securityNotices": "🔵 Security Notices: Security tips will be highlighted with a 🔴 symbol. Please pay attention to these notices.",
-  "terms-stayUpdated": "🔵 Stay Updated: Join the xTrust Telegram channel or follow the xTrust page on X (formerly Twitter) for the latest updates.",
+  "terms-example": "Example: If a user invests 1,000 USDT and their investment grows to 5,000 USDT, no fees apply to the first 3,000 USDT. For the remaining 2,000 USDT, 1,000 USDT (50%) will be deducted. From this, 20 USDT goes to the referrer, and 980 USDT goes to the trading team.",
+  "terms-partialWithdrawal": "Partial Withdrawal: Fees are only deducted at the time of withdrawal and only from the withdrawn amount. For example, if a user withdraws 1,000 USDT from 5,000 USDT, 200 USDT will be deducted, with 4 USDT going to the referrer and 196 USDT to the trading team.",
+  "terms-additionalInvestments": "Additional Investments: Users can increase their investment at any time, but the growth calculation is based on their initial investment.",
+  "terms-currencyAndNetwork": "Currency and Network: Investments are only accepted in USDT on the BNB network. The system is not responsible for other cryptocurrencies sent by mistake.",
+  "terms-smartContractMethods": "Smart Contract Methods: USDT must be invested using the smart contract methods provided on this site. Direct transfers to the xTrust smart contract are not supported, and the system is not responsible for such transfers.",
+  "terms-tradingOperations": "Trading Operations: All trading operations are conducted on PancakeSwap V2. A limited list of cryptocurrencies is used for trading, as listed on the smart contract page.",
+  "terms-withdrawalProcess": "Withdrawal Process: At the time of withdrawal, the system automatically transfers the requested amount to the user's account based on the available cryptocurrencies. Users are advised to manually convert their funds to USDT on decentralized exchanges to avoid slippage.",
+  "terms-securityTips": "Security Tips: Always maintain a safety margin in your investments and avoid investing amounts critical to your livelihood.",
+  "terms-securityNotices": "Security Notices: Security tips will be highlighted with a 🔴 symbol. Please pay attention to these notices.",
+  "terms-stayUpdated": "Stay Updated: Join the xTrust Telegram channel or follow the xTrust page on X (formerly Twitter) for the latest updates.",
 
   "smartContractOverview": "Smart Contract Overview",
   "smartContractDescription": "A Smart Contract is an advanced technology related to blockchain development. It allows you to leverage the benefits of blockchain, such as decentralization, transparency, immutability, verifiability, availability, and security, for computer programs. In this technology, your computer program, consisting of a set of data and functions, is recorded on the blockchain. Any user with permission can execute the desired functions, store data on the blockchain, or transfer cryptocurrencies into or out of the program.",
@@ -84,11 +86,51 @@
     "The trading team cannot transfer funds outside the Pancake Swap V2 exchange."
   ],
   "xTrustDeployed": "The xTrust smart contract is deployed on the BNB Smart Chain at the following address:",
-  "contractAddress": "0xCE7de646e7208a4Ef112cb6ed5038FA6cC6b12e3",
   "greenTickDescription": "The smart contract has a green tick, indicating that the provided code matches the source code registered on the BNB blockchain.",
   "supportedTokens": "Supported Tokens",
   "tradesDescription": "All trades are conducted between the above tokens and USDT on the BNB Smart Chain at the address:",
-  "usdtAddress": "0x55d398326f99059fF775485246999027B3197955",
   "consultExpert": "You can consult a smart contract expert to review the full xTrust smart contract code to ensure its complete security and prevent any misuse.",
-  "viewOnBscScan": "View Smart Contract on BscScan"
+  "viewOnBscScan": "View Smart Contract on BscScan",
+
+  "token-tabel-btcb": "Bitcoin-pegged token on BNB Smart Chain",
+  "token-tabel-eth": "Ether-pegged token on BNB Smart Chain",
+  "token-tabel-trx": "Tron-pegged token on BNB Smart Chain",
+  "token-tabel-wmatic": "Polygon-pegged token on BNB Smart Chain",
+  "token-tabel-yfi": "Yearn.finance-pegged token on BNB Smart Chain",
+  "token-tabel-comp": "Compound Coin-pegged token on BNB Smart Chain",
+  "token-tabel-doge": "Dogecoin-pegged token on BNB Smart Chain",
+  "token-tabel-etc": "Ethereum Classic-pegged token on BNB Smart Chain",
+  "token-tabel-stg": "Stargate Finance-pegged token on BNB Smart Chain",
+  "token-tabel-token": "TokenFi-pegged token on BNB Smart Chain",
+  "token-tabel-woo": "WOO-pegged token on BNB Smart Chain",
+  "token-tabel-ton": "TON Coin-pegged token on BNB Smart Chain",
+  "token-tabel-ftm": "Fantom-pegged token on BNB Smart Chain",
+
+  "start-invest-header": {
+    "title": "Welcome to xTrust",
+    "subtitle": "xTrust is a cutting-edge, secure investment platform designed for cryptocurrency trading through the power of smart contracts. By leveraging blockchain technology, xTrust ensures transparency, security, and efficiency in every transaction. Invest in the xTrust smart contract using Tether (USDT), a stable and reliable cryptocurrency, and let our team of expert traders manage your assets with precision and expertise. Our advanced trading algorithms and market analysis tools are designed to maximize your profits while minimizing risks. Whether you're a seasoned investor or new to the world of crypto, xTrust provides a seamless and user-friendly experience to help you grow your wealth. Join us today and take the first step towards financial freedom with a platform you can trust."
+  },
+  "start-invest-card1": {
+    "title": "Smart Trading",
+    "description": "Our traders use advanced algorithms and precise analyses to maximize your profits."
+  },
+  "start-invest-card2": {
+    "title": "Secure Investments",
+    "description": "Invest securely using Tether (USDT) and smart contracts to ensure transparency and safety."
+  },
+  "start-invest-card3": {
+    "title": "Flexible Withdrawals",
+    "description": "Withdraw your investment anytime and transfer it directly to your wallet."
+  },
+  "start-invest-whyChoose": {
+    "title": "Why Choose xTrust?",
+    "description": "xTrust offers a unique combination of security, flexibility, and profitability. With our smart contract-based system, you can monitor your investments in real-time and withdraw funds anytime. Plus, earn additional rewards by referring others to the platform."
+  },
+  "start-invest-footer": {
+    "title": "Ready to Start Investing?",
+    "subtitle": "Connect your wallet to begin your investment journey with xTrust."
+  },
+
+  "connect-wallet": "Connect Wallet",
+  "disconnect-wallet": "Disconnect Wallet"
 }

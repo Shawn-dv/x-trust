@@ -24,7 +24,7 @@ export default function Navbar() {
 		setAnchorEl(null);
 	};
 	return (
-		<nav className="w-full flex items-center py-4 px-4 lg:px-8 bg-white sticky top-0 z-50 shadow-md">
+		<nav className="w-full flex flex-row-reverse items-center py-4 px-4 lg:px-8 bg-white sticky top-0 z-50 shadow-md">
 			<ImageLoader
 				className="cursor-pointer"
 				onClick={() => navigateTo('/')}
@@ -32,7 +32,7 @@ export default function Navbar() {
 				src={logo}
 			/>
 
-			<div className="flex-1 flex gap-3 items-center justify-end">
+			<div className="flex-1 flex gap-3 items-center justify-start">
 				{!navbarExtend &&
 					pages &&
 					pages.length > 0 &&

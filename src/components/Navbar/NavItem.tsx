@@ -36,7 +36,6 @@ export default function NavItem({
       } ${isSelected && "!font-semibold"} ${className}`}
       onClick={handleClick}
       size="small"
-      
       variant={isSelected || outline ? "outlined" : "contained"}
       startIcon={
         <page.Icon

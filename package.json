@@ -10,12 +10,13 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-	"predeploy": "npm run build",
-	"deploy": "gh-pages -d dist"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
-    "@mui/material": "^6.3.0",
+    "@mui/material": "^6.4.6",
     "@reown/appkit": "^1.6.2",
     "@reown/appkit-adapter-ethers": "^1.6.2",
     "@reown/appkit-adapter-wagmi": "^1.6.2",

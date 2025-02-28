@@ -11,7 +11,7 @@ export default function SmartContractPageView() {
         elevation={3}
         className="p-6 max-w-4xl mx-auto flex flex-col gap-5"
       >
-        <Typography variant="h4" className="mb-4 font-bold text-center">
+        <Typography variant="h4" className="mb-4 !font-bold text-center">
           {t("smartContractOverview")}
         </Typography>
 
@@ -57,9 +57,9 @@ export default function SmartContractPageView() {
 
         <Typography
           variant="body1"
-          className="mb-4 font-mono text-sm bg-gray-100 p-2 rounded"
+          className="mb-4 font-mono text-sm bg-gray-100 p-2 rounded break-all"
         >
-          {t("contractAddress")}
+          0xCE7de646e7208a4Ef112cb6ed5038FA6cC6b12e3
         </Typography>
 
         <Typography variant="body1" className="mb-4">
@@ -78,9 +78,9 @@ export default function SmartContractPageView() {
 
         <Typography
           variant="body1"
-          className="mb-4 font-mono text-sm bg-gray-100 p-2 rounded"
+          className="mb-4 font-mono text-sm bg-gray-100 p-2 rounded break-all"
         >
-          {t("usdtAddress")}
+          0x55d398326f99059fF775485246999027B3197955
         </Typography>
 
         <Typography variant="body1" className="mb-4">

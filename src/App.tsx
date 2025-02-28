@@ -9,12 +9,19 @@ import NotFoundPage from "./views/not-found";
 import Navbar from "./components/Navbar";
 import ScrollToTop from "./components/ScrollToTop";
 import Footer from "./components/Footer";
+import { useEffect } from "react";
 
 function App() {
   const { pages } = usePageStore();
   const location = useLocation();
 
   const isMainRoute = location.pathname === "/";
+
+  useEffect(() => {
+    if (import.meta.env.VITE_LANGUAGE === "Fa") {
+      document.title = "xTrust | ایکس تراست";
+    }
+  }, []);
 
   return (
     <main>

@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
@@ -24,9 +24,15 @@ export default function AboutPageView() {
   return (
     <main className="flex flex-col gap-10 py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">
+        <Typography
+          variant="h4"
+          className="!font-bold mb-8"
+          align="center"
+          gutterBottom
+        >
           {t("about")} {t("xtrust")}
-        </h1>
+        </Typography>
+
         <div className="prose prose-lg text-gray-700">
           <p>
             {parts.map((part, index) => {

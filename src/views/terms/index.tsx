@@ -11,14 +11,14 @@ const TermsPageView: React.FC = () => {
         elevation={3}
         className="p-6 max-w-4xl mx-auto flex flex-col gap-4"
       >
-        <Typography variant="h4" className="text-center font-bold mb-8">
+        <Typography variant="h4" className="text-center !font-bold mb-8">
           {t("terms")}
         </Typography>
 
         <div className="space-y-6 text-gray-700">
           <Typography variant="body1">{t("terms-termsDescription")}</Typography>
 
-          <ul className="space-y-4">
+          <ul className="space-y-4 list-disc pl-6 marker:text-primary-400 marker:text-xl">
             <li>
               <Typography variant="body1">
                 {t("terms-investmentWithdrawal")}
@@ -31,7 +31,7 @@ const TermsPageView: React.FC = () => {
             </li>
             <li>
               <Typography variant="body1">{t("terms-systemFees")}</Typography>
-              <ul className="space-y-2 pl-6 mt-2">
+              <ul className="space-y-2 pl-6 mt-2 list-disc marker:text-primary-400 marker:text-xl">
                 <li>
                   <Typography variant="body2">
                     {t("terms-noFeesUpTo300")}
