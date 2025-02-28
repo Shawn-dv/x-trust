@@ -20,9 +20,6 @@ function App() {
   // Find the current page based on the route
   const currentPage = pages.find((page) => page.route === location.pathname);
 
-  // Determine if padding should be applied
-  const shouldApplyPadding = !currentPage?.disablePadding;
-
   useEffect(() => {
     if (i18n.language === "Fa") {
       document.title = "xTrust | ایکس تراست";
@@ -35,7 +32,11 @@ function App() {
       <section
         className={`flex flex-col max-w-[1920px] min-h-[100vh] mx-auto shadow-gray-600 shadow-2xl`}
       >
-        <div className={`${shouldApplyPadding ? "p-6" : "md:p-6"} mb-4`}>
+        <div
+          className={`${!currentPage?.disablePadding && !currentPage?.highPadding ? "p-6" : ""} ${
+            currentPage?.highPadding ? "md:p-6" : ""
+          } mb-4`}
+        >
           <Routes>
             {pages.map((thePage, index) => (
               <Route

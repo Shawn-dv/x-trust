@@ -33,7 +33,8 @@ export interface Page {
   key: PageKeys;
   component: React.ComponentType;
   Icon: IconType;
-  disablePadding?: boolean; // Add this line
+  disablePadding?: boolean;
+  highPadding?: boolean;
 }
 
 interface PageStore {
@@ -65,7 +66,7 @@ export const usePageStore = create<PageStore>(() => ({
       key: PageKeys.UserPanel,
       component: UserPanelViewPage,
       Icon: HiUser,
-      disablePadding: true,
+      highPadding: true,
     },
     {
       route: "/about",
@@ -80,7 +81,7 @@ export const usePageStore = create<PageStore>(() => ({
       key: PageKeys.Terms,
       component: TermsPageView,
       Icon: HiDocumentText,
-      disablePadding: true,
+      highPadding: true,
     },
     {
       route: "/smart-contract",
@@ -88,7 +89,7 @@ export const usePageStore = create<PageStore>(() => ({
       key: PageKeys.SmartContract,
       component: SmartContractPageView,
       Icon: HiCode,
-      disablePadding: true,
+      highPadding: true,
     },
   ],
 }));
