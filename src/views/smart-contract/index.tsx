@@ -9,7 +9,7 @@ export default function SmartContractPageView() {
     <Container maxWidth={false} className="py-8 bg-gray-50">
       <Paper
         elevation={3}
-        className="p-6 max-w-4xl mx-auto flex flex-col gap-5"
+        className="py-6 px-8 max-w-4xl mx-auto flex flex-col gap-5"
       >
         <Typography variant="h4" className="mb-4 !font-bold text-center">
           {t("smartContractOverview")}

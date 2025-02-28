@@ -101,9 +101,9 @@ const TokenTable: React.FC = () => {
       <Table>
         <TableHead className="bg-gray-100">
           <TableRow>
-            <TableCell>Token</TableCell>
-            <TableCell>Description</TableCell>
-            <TableCell>Contract Address</TableCell>
+            <TableCell>{t("token")}</TableCell>
+            <TableCell>{t("description")}</TableCell>
+            <TableCell>{t("contract-address")}</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

@@ -10,7 +10,6 @@ import {
 import React from "react";
 import { IconType } from "react-icons/lib";
 import MainPageView from "../views/main";
-import i18n from "../i18n";
 import StartInvestPageView from "../views/start-invest";
 import UserPanelViewPage from "../views/user-panel";
 import AboutPageView from "../views/about";
@@ -34,6 +33,7 @@ export interface Page {
   key: PageKeys;
   component: React.ComponentType;
   Icon: IconType;
+  disablePadding?: boolean; // Add this line
 }
 
 interface PageStore {
@@ -44,15 +44,16 @@ export const usePageStore = create<PageStore>(() => ({
   pages: [
     {
       route: "/",
-      title: i18n.t("home"),
+      title: "home",
       key: PageKeys.Home,
       component: MainPageView,
       Icon: HiHome,
+      disablePadding: true,
     },
     {
       noLogin: true,
       route: "/start-invest",
-      title: i18n.t("start-invest"),
+      title: "start-invest",
       key: PageKeys.StartInvest,
       component: StartInvestPageView,
       Icon: HiBriefcase,
@@ -60,31 +61,34 @@ export const usePageStore = create<PageStore>(() => ({
     {
       login: true,
       route: "/user-panel",
-      title: i18n.t("user-panel"),
+      title: "user-panel",
       key: PageKeys.UserPanel,
       component: UserPanelViewPage,
       Icon: HiUser,
+      disablePadding: true,
     },
     {
       route: "/about",
-      title: i18n.t("about"),
+      title: "about",
       key: PageKeys.About,
       component: AboutPageView,
       Icon: HiInformationCircle,
     },
     {
       route: "/terms",
-      title: i18n.t("terms"),
+      title: "terms",
       key: PageKeys.Terms,
       component: TermsPageView,
       Icon: HiDocumentText,
+      disablePadding: true,
     },
     {
       route: "/smart-contract",
-      title: i18n.t("smart-contract"),
+      title: "smart-contract",
       key: PageKeys.SmartContract,
       component: SmartContractPageView,
       Icon: HiCode,
+      disablePadding: true,
     },
   ],
 }));

@@ -9,13 +9,13 @@ import { useTranslation } from "react-i18next";
 import { TbWalletOff } from "react-icons/tb";
 
 export default function DisconnectButton() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { isConnected } = useAppKitAccount();
   const { open: isOpen } = useAppKitState();
   const { disconnect } = useDisconnect();
 
   useEffect(() => {
-    if (import.meta.env.VITE_LANGUAGE === "Fa") {
+    if (i18n.language === "Fa") {
       import("./style.css");
     }
   }, []);
@@ -28,7 +28,7 @@ export default function DisconnectButton() {
       color="error"
       variant="contained"
       size="large"
-      className={`${import.meta.env.VITE_LANGUAGE == "Fa" && "gap-[12px]"}`}
+      className={`${i18n.language == "Fa" && "gap-[12px]"}`}
       startIcon={<TbWalletOff />}
     >
       {t("disconnect-wallet")}

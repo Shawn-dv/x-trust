@@ -1,11 +1,11 @@
-import { Container, Tab, Tabs, Typography } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import { useAppKitAccount } from "@reown/appkit/react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import CustomTabs from "../../components/custom/Tabs";
 import DisconnectButton from "../../components/custom/appkit/DisconnectButton";
 import { useTranslation } from "react-i18next";
-import InformationTab from "./tabs/InformationTab";
+import InformationTab from "./tabs/Information/InformationTab";
 import InvestTab from "./tabs/InvestTab";
 import WithdrawTab from "./tabs/WithdrawTab";
 
@@ -53,7 +53,7 @@ export default function UserPanelViewPage() {
       </Typography>
       <CustomTabs variant="fullWidth" tabs={tabs} defaultValue="1" />
 
-      <div>
+      <div className="flex w-full justify-center mt-6">
         <DisconnectButton />
       </div>
     </Container>

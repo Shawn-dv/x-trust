@@ -9,13 +9,13 @@ import { useTranslation } from "react-i18next";
 import { FaWallet } from "react-icons/fa";
 
 export default function ConnectButton() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { open } = useAppKit();
   const { isConnected } = useAppKitAccount();
   const { open: isOpen } = useAppKitState();
 
   useEffect(() => {
-    if (import.meta.env.VITE_LANGUAGE === "Fa") {
+    if (i18n.language === "Fa") {
       import("./style.css");
     }
   }, []);
@@ -28,7 +28,7 @@ export default function ConnectButton() {
       color="primary"
       variant="contained"
       size="large"
-      className={`${import.meta.env.VITE_LANGUAGE == "Fa" && "gap-[12px]"}`}
+      className={`${i18n.language == "Fa" && "gap-[12px]"}`}
       startIcon={<FaWallet />}
     >
       {t("connect-wallet")}

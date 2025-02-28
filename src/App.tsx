@@ -10,15 +10,21 @@ import Navbar from "./components/Navbar";
 import ScrollToTop from "./components/ScrollToTop";
 import Footer from "./components/Footer";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 function App() {
+  const { i18n } = useTranslation();
   const { pages } = usePageStore();
   const location = useLocation();
 
-  const isMainRoute = location.pathname === "/";
+  // Find the current page based on the route
+  const currentPage = pages.find((page) => page.route === location.pathname);
+
+  // Determine if padding should be applied
+  const shouldApplyPadding = !currentPage?.disablePadding;
 
   useEffect(() => {
-    if (import.meta.env.VITE_LANGUAGE === "Fa") {
+    if (i18n.language === "Fa") {
       document.title = "xTrust | ایکس تراست";
     }
   }, []);
@@ -29,7 +35,7 @@ function App() {
       <section
         className={`flex flex-col max-w-[1920px] min-h-[100vh] mx-auto shadow-gray-600 shadow-2xl`}
       >
-        <div className={`${!isMainRoute ? "p-6" : ""} mb-4`}>
+        <div className={`${shouldApplyPadding ? "p-6" : "md:p-6"} mb-4`}>
           <Routes>
             {pages.map((thePage, index) => (
               <Route

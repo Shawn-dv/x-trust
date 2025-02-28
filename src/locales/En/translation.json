@@ -5,6 +5,13 @@
   "home-introduction-title": "Introduction",
   "home-introduction-desc": "xTrust is a secure investment system for cryptocurrency trading using smart contracts. Here, you invest in the xTrust smart contract with the Tether cryptocurrency. xTrust traders use highly precise analyses to trade with your investment. You can monitor the status of your investment at any time through your user panel. Additionally, you can withdraw any amount of your investment at any time and transfer it to your wallet. Furthermore, by introducing other users to the system, you can share in their profits.",
 
+  "token": "Token",
+  "description": "Description",
+  "contract-address": "Contract Address",
+
+  "count": "Count",
+  "system": "System",
+  "user": "User",
   "more": "More",
   "copy-right": "xTrust. All rights reserved.",
 
@@ -132,5 +139,58 @@
   },
 
   "connect-wallet": "Connect Wallet",
-  "disconnect-wallet": "Disconnect Wallet"
+  "disconnect-wallet": "Disconnect Wallet",
+
+  "information-table": {
+    "investors": "Number of investors",
+    "invested": "The total amount invested",
+    "withdrawn": "The total amount withdrawn",
+    "value-capital": "Current value of system capital",
+    "ratio-capital": "Current ratio of system capital"
+  },
+
+  "user-table": {
+    "investment-amount": "Investment amount",
+    "withdrawal-amount": "Withdrawal amount",
+    "start-day": "The equivalent value of the investment on the start day",
+    "present-value": "Present value of investment",
+    "capital-ratio": "Capital ratio",
+    "introduced-users": "Introduced users",
+    "introduced-investments": "Investment of introduced users",
+    "introduced-withdraws": "Withdraw from introduced users"
+  },
+
+  "available-tokens": {
+    "title": "Available tokens",
+    "usdt-value": "Value in USDT"
+  },
+
+  
+    "invest-tab": {
+      "title": "Invest",
+      "amount": "Amount (USDT)",
+      "sendTransaction": "Send Transaction",
+      "transactionProcess": "Transaction Process",
+      "step1": "1. Approve sending USDT from your wallet to the smart contract.",
+      "step2": "2. Register your investment using the xTrust smart contract.",
+      "transactionWarning": "Your investment will not be completed without approving both transactions.",
+      "securityTips": "Security Tips",
+      "securityWarning": "When connecting a wallet to a website or app, never keep more cryptocurrency than necessary in that account.",
+      "requiredFunds": "For this transaction, only keep the following in your connected wallet:",
+      "usdtTokens": "- USDT tokens for the amount you wish to invest.",
+      "bnbTokens": "- A small amount of BNB to cover transaction fees."
+    },
+  
+    
+      "withdraw-tab": {
+        "title": "Withdraw Funds",
+        "maxWithdrawal": "Maximum Withdrawal:",
+        "maxReceivable": "Maximum Receivable:",
+        "automaticDistribution": "During withdrawal, the system will automatically distribute the requested amount based on the available cryptocurrencies",
+        "withdrawAmount": "Withdrawal Amount (USDT)",
+        "sendTransaction": "Send Transaction",
+        "receivableAmount": "Your Receivable Amount:"
+      }
+    
+
 }

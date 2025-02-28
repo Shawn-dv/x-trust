@@ -59,6 +59,7 @@ export default function CustomTabs({
   return (
     <Container maxWidth={false}>
       <Tabs
+        selectionFollowsFocus
         variant={variant}
         scrollButtons={"auto"}
         value={value}
@@ -73,7 +74,7 @@ export default function CustomTabs({
 
       {tabs.map((tab) => (
         <TabPanel
-          className={"border-[1.5px] rounded-bl-md rounded-br-md"}
+          className={"border-[1.5px] border-t-0 rounded-bl-md rounded-br-md"}
           key={tab.value}
           value={value}
           index={tab.value}

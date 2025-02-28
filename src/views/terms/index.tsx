@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Typography, Paper, Container } from "@mui/material";
+import LanguageSwitcher from "../../components/custom/SwitchLanguage";
 
 const TermsPageView: React.FC = () => {
   const { t } = useTranslation();
@@ -9,7 +10,7 @@ const TermsPageView: React.FC = () => {
     <Container maxWidth={false} className="py-8 bg-gray-50">
       <Paper
         elevation={3}
-        className="p-6 max-w-4xl mx-auto flex flex-col gap-4"
+        className="py-6 px-8 max-w-4xl mx-auto flex flex-col gap-4"
       >
         <Typography variant="h4" className="text-center !font-bold mb-8">
           {t("terms")}
@@ -96,6 +97,9 @@ const TermsPageView: React.FC = () => {
           </ul>
         </div>
       </Paper>
+      <div className="flex items-center justify-center mt-6">
+        <LanguageSwitcher />
+      </div>
     </Container>
   );
 };

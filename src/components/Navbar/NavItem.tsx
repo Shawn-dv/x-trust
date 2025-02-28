@@ -2,6 +2,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 import { Page } from "../../store/usePageStore";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function NavItem({
   page,
@@ -16,7 +17,7 @@ export default function NavItem({
 }) {
   const location = useLocation();
   const navigate = useNavigate();
-
+  const { i18n, t } = useTranslation();
   const isSelected = page.route === location.pathname;
 
   const handleClick = () => {
@@ -24,16 +25,18 @@ export default function NavItem({
   };
 
   useEffect(() => {
-    if (import.meta.env.VITE_LANGUAGE === "Fa") {
+    console.log("i18n.language:", i18n.language);
+
+    if (i18n.language === "Fa") {
       import("./style.css");
     }
-  }, []);
+  }, [i18n.language]);
 
   return (
     <Button
-      className={`!border-2 ${
-        import.meta.env.VITE_LANGUAGE == "Fa" && "gap-[12px]"
-      } ${isSelected && "!font-semibold"} ${className}`}
+      className={`!border-2 ${i18n.language == "Fa" && "gap-[12px]"} ${
+        isSelected && "!font-semibold"
+      } ${className}`}
       onClick={handleClick}
       size="small"
       variant={isSelected || outline ? "outlined" : "contained"}
@@ -45,7 +48,7 @@ export default function NavItem({
         />
       }
     >
-      {title ? title : page.title}
+      {title ? t(title) : t(page.title)}
     </Button>
   );
 }
