@@ -34,7 +34,7 @@ function App() {
       >
         <div
           className={`${!currentPage?.disablePadding && !currentPage?.highPadding ? "p-6" : ""} ${
-            currentPage?.highPadding ? "md:p-6" : ""
+            currentPage?.highPadding && !currentPage?.disablePadding ? "md:p-6" : ""
           } mb-4`}
         >
           <Routes>

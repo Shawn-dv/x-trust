@@ -97,9 +97,9 @@ const TermsPageView: React.FC = () => {
           </ul>
         </div>
       </Paper>
-      <div className="flex items-center justify-center mt-6">
+      {/* <div className="flex items-center justify-center mt-6">
         <LanguageSwitcher />
-      </div>
+      </div> */}
     </Container>
   );
 };
