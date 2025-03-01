@@ -39,7 +39,6 @@ export default function Navbar() {
           pages.map((page) => {
             if (page.noLogin && isConnected) return null;
             if (page.login && !isConnected) return null;
-            if (page.pageOnly) return null;
             return <NavItem page={page} key={page.key} />;
           })}
         {navbarExtend && (
@@ -64,7 +63,6 @@ export default function Navbar() {
                 pages.map((page, index) => {
                   if (page.noLogin && isConnected) return null;
                   if (page.login && !isConnected) return null;
-                  if (page.pageOnly) return null;
                   return (
                     <MenuItem onClick={handleMenuClose} key={index}>
                       <NavItem

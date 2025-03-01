@@ -21,11 +21,10 @@ export default function NavItem({
   const normalizePath = (path: string) => path.replace(/\/+$/, ""); // Removes trailing slashes
 
   const isSelected =
-    normalizePath(`${import.meta.env.BASE_URL}${page.route}`) ===
-    normalizePath(location.pathname);
+    normalizePath(page.route) === normalizePath(location.pathname);
 
   const handleClick = () => {
-    navigate(`${import.meta.env.BASE_URL}${page.route}`);
+    navigate(page.route);
   };
 
   useEffect(() => {
