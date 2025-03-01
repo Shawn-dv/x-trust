@@ -21,6 +21,8 @@ function App() {
   const currentPage = pages.find((page) => page.route === location.pathname);
 
   useEffect(() => {
+    console.log("location.pathname:", location.pathname);
+
     if (i18n.language === "Fa") {
       document.title = "xTrust | ایکس تراست";
     }
@@ -33,8 +35,15 @@ function App() {
         className={`flex flex-col max-w-[1920px] min-h-[100vh] mx-auto shadow-gray-600 shadow-2xl`}
       >
         <div
-          className={`${!currentPage?.disablePadding && !currentPage?.highPadding ? "p-6" : ""} ${
-            currentPage?.highPadding && !currentPage?.disablePadding ? "md:p-6" : ""
+          className={`${
+            currentPage?.disablePadding == undefined &&
+            currentPage?.highPadding == undefined
+              ? "p-6"
+              : ""
+          } ${
+            currentPage?.highPadding && currentPage?.disablePadding == undefined
+              ? "md:p-6"
+              : ""
           } mb-4`}
         >
           <Routes>
