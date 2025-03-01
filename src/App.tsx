@@ -20,7 +20,7 @@ function App() {
   const normalizePath = (path: string) => path.replace(/\/+$/, ""); // Removes trailing slashes
 
   const currentPage = pages.find(
-    (page) => normalizePath(page.route) === normalizePath(location.pathname)
+    (page) => normalizePath(`${import.meta.env.BASE_URL}${page.route}`) === normalizePath(location.pathname)
   );
 
   useEffect(() => {
@@ -53,7 +53,7 @@ function App() {
             {pages.map((thePage, index) => (
               <Route
                 key={index}
-                path={thePage.route}
+                path={`${import.meta.env.BASE_URL}${thePage.route}`}
                 element={<thePage.component />}
               />
             ))}

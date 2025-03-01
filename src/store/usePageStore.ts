@@ -15,6 +15,7 @@ import UserPanelViewPage from "../views/user-panel";
 import AboutPageView from "../views/about";
 import TermsPageView from "../views/terms";
 import SmartContractPageView from "../views/smart-contract";
+import TraderPageView from "../views/trader";
 
 export enum PageKeys {
   Home = "home",
@@ -23,6 +24,7 @@ export enum PageKeys {
   About = "about",
   Terms = "terms",
   SmartContract = "smart-contract",
+  Trader = "trader",
 }
 
 export interface Page {
@@ -35,6 +37,7 @@ export interface Page {
   Icon: IconType;
   disablePadding?: boolean;
   highPadding?: boolean;
+  pageOnly?: boolean;
 }
 
 interface PageStore {
@@ -90,6 +93,14 @@ export const usePageStore = create<PageStore>(() => ({
       component: SmartContractPageView,
       Icon: HiCode,
       highPadding: true,
+    },
+    {
+      route: "/trader",
+      title: "trader",
+      key: PageKeys.Trader,
+      component: TraderPageView,
+      Icon: HiCode,
+      pageOnly: true,
     },
   ],
 }));

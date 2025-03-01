@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Typography, Paper, Container } from "@mui/material";
+import LanguageSwitcher from "../../components/custom/SwitchLanguage";
 
 const TermsPageView: React.FC = () => {
   const { t } = useTranslation();
@@ -96,9 +97,9 @@ const TermsPageView: React.FC = () => {
           </ul>
         </div>
       </Paper>
-      {/* <div className="flex items-center justify-center mt-6">
+      <div className="flex items-center justify-center mt-6">
         <LanguageSwitcher />
-      </div> */}
+      </div>
     </Container>
   );
 };
