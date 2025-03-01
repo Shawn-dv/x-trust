@@ -17,8 +17,11 @@ function App() {
   const { pages } = usePageStore();
   const location = useLocation();
 
-  // Find the current page based on the route
-  const currentPage = pages.find((page) => page.route === location.pathname);
+  const normalizePath = (path: string) => path.replace(/\/+$/, ""); // Removes trailing slashes
+
+  const currentPage = pages.find(
+    (page) => normalizePath(page.route) === normalizePath(location.pathname)
+  );
 
   useEffect(() => {
     console.log("location.pathname:", location.pathname);
