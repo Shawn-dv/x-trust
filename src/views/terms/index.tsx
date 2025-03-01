@@ -1,7 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Typography, Paper, Container } from "@mui/material";
-import LanguageSwitcher from "../../components/custom/SwitchLanguage";
 
 const TermsPageView: React.FC = () => {
   const { t } = useTranslation();
