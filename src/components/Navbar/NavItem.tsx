@@ -18,7 +18,10 @@ export default function NavItem({
   const location = useLocation();
   const navigate = useNavigate();
   const { i18n, t } = useTranslation();
-  const isSelected = page.route === location.pathname;
+  const normalizePath = (path: string) => path.replace(/\/+$/, ""); // Removes trailing slashes
+
+  const isSelected =
+    normalizePath(page.route) === normalizePath(location.pathname);
 
   const handleClick = () => {
     navigate(page.route);
