@@ -44,7 +44,7 @@ export function createXTrustStore(walletProvider: any) {
 		loading: { global: false } as Record<LoadingKeys, boolean>,
 		// Instantiate the contracts with your own environment variables
 		/* poolContract: new Contract(
-			import.meta.env.VITE_STAKING_POOL_CONTRACT_ADDRESS,
+			import.meta.env.VITE_CONTRACT_ADDRESS,
 			StakingPoolABI,
 			provider
 		), */

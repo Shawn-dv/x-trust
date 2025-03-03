@@ -3,7 +3,6 @@ import { useAppKitAccount } from "@reown/appkit/react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import CustomTabs from "../../components/custom/Tabs";
-import DisconnectButton from "../../components/custom/appkit/DisconnectButton";
 import { useTranslation } from "react-i18next";
 import InformationTab from "./tabs/Information/InformationTab";
 import InvestTab from "./tabs/InvestTab";
@@ -51,11 +50,8 @@ export default function UserPanelViewPage() {
       >
         {t("user-panel")}
       </Typography>
-      <CustomTabs variant="fullWidth" tabs={tabs} defaultValue="1" />
 
-      <div className="flex w-full justify-center mt-6">
-        <DisconnectButton />
-      </div>
+      <CustomTabs variant="fullWidth" tabs={tabs} defaultValue="1" />
     </Container>
   );
 }

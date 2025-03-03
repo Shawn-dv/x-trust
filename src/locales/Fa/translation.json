@@ -140,6 +140,7 @@
 
   "connect-wallet": "اتصال کیف پول",
   "disconnect-wallet": "قطع اتصال کیف پول",
+  "wallet-address": "آدرس کیف پول",
 
   "information-table": {
     "investors": "تعداد سرمایه‌گذار",
@@ -180,15 +181,43 @@
     "bnbTokens": "- مقدار کمی رمزارز BNB برای پرداخت کارمزد."
   },
 
-  
-    "withdraw-tab": {
-      "title": "برداشت",
-      "maxWithdrawal": "حداکثر برداشت شما:",
-      "maxReceivable": "حداکثر دریافتی شما:",
-      "automaticDistribution": "در این قسمت در هنگام برداشت، سیستم به طور خودکار به نسبت رمزارزهای موجود مقدار درخواستی کاربر را به حساب وی واریز خواهد نمود",
-      "withdrawAmount": "مقدار برداشت توکن (برحسب تتر USDT)",
-      "sendTransaction": "ارسال تراکنش",
-      "receivableAmount": "دریافتی شما معادل:"
+  "withdraw-tab": {
+    "title": "برداشت",
+    "maxWithdrawal": "حداکثر برداشت شما:",
+    "maxReceivable": "حداکثر دریافتی شما:",
+    "automaticDistribution": "در این قسمت در هنگام برداشت، سیستم به طور خودکار به نسبت رمزارزهای موجود مقدار درخواستی کاربر را به حساب وی واریز خواهد نمود",
+    "withdrawAmount": "مقدار برداشت توکن (برحسب تتر USDT)",
+    "sendTransaction": "ارسال تراکنش",
+    "receivableAmount": "دریافتی شما معادل:"
+  },
+
+  "trader": {
+    "title": "پنل ی تریدر",
+    "selectToken": {
+      "title": "انتخاب توکن برای معامله:",
+      "token": "توکن",
+      "balance": "موجودی",
+      "buyPrice": "قیمت خرید",
+      "sellPrice": "قیمت فروش",
+      "balanceValue": "ارزش موجودی"
+    },
+    "buy": {
+      "title": "خرید",
+      "tokenName": "نام توکن",
+      "usdtAmount": "مقدار USDT",
+      "buyPrice": "قیمت خرید",
+      "slippage": "لغزش",
+      "minTokenAmount": "حداقل مقدار توکن",
+      "buyButton": "خرید"
+    },
+    "sell": {
+      "title": "فروش",
+      "tokenName": "نام توکن",
+      "tokenAmount": "مقدار توکن",
+      "sellPrice": "قیمت فروش",
+      "slippage": "لغزش",
+      "minUsdtAmount": "حداقل مقدار USDT",
+      "sellButton": "فروش"
     }
-  
+  }
 }

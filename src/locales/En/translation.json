@@ -140,6 +140,7 @@
 
   "connect-wallet": "Connect Wallet",
   "disconnect-wallet": "Disconnect Wallet",
+  "wallet-address": "Wallet Address",
 
   "information-table": {
     "investors": "Number of investors",
@@ -165,32 +166,58 @@
     "usdt-value": "Value in USDT"
   },
 
-  
-    "invest-tab": {
-      "title": "Invest",
-      "amount": "Amount (USDT)",
-      "sendTransaction": "Send Transaction",
-      "transactionProcess": "Transaction Process",
-      "step1": "1. Approve sending USDT from your wallet to the smart contract.",
-      "step2": "2. Register your investment using the xTrust smart contract.",
-      "transactionWarning": "Your investment will not be completed without approving both transactions.",
-      "securityTips": "Security Tips",
-      "securityWarning": "When connecting a wallet to a website or app, never keep more cryptocurrency than necessary in that account.",
-      "requiredFunds": "For this transaction, only keep the following in your connected wallet:",
-      "usdtTokens": "- USDT tokens for the amount you wish to invest.",
-      "bnbTokens": "- A small amount of BNB to cover transaction fees."
-    },
-  
-    
-      "withdraw-tab": {
-        "title": "Withdraw Funds",
-        "maxWithdrawal": "Maximum Withdrawal:",
-        "maxReceivable": "Maximum Receivable:",
-        "automaticDistribution": "During withdrawal, the system will automatically distribute the requested amount based on the available cryptocurrencies",
-        "withdrawAmount": "Withdrawal Amount (USDT)",
-        "sendTransaction": "Send Transaction",
-        "receivableAmount": "Your Receivable Amount:"
-      }
-    
+  "invest-tab": {
+    "title": "Invest",
+    "amount": "Amount (USDT)",
+    "sendTransaction": "Send Transaction",
+    "transactionProcess": "Transaction Process",
+    "step1": "1. Approve sending USDT from your wallet to the smart contract.",
+    "step2": "2. Register your investment using the xTrust smart contract.",
+    "transactionWarning": "Your investment will not be completed without approving both transactions.",
+    "securityTips": "Security Tips",
+    "securityWarning": "When connecting a wallet to a website or app, never keep more cryptocurrency than necessary in that account.",
+    "requiredFunds": "For this transaction, only keep the following in your connected wallet:",
+    "usdtTokens": "- USDT tokens for the amount you wish to invest.",
+    "bnbTokens": "- A small amount of BNB to cover transaction fees."
+  },
 
+  "withdraw-tab": {
+    "title": "Withdraw Funds",
+    "maxWithdrawal": "Maximum Withdrawal:",
+    "maxReceivable": "Maximum Receivable:",
+    "automaticDistribution": "During withdrawal, the system will automatically distribute the requested amount based on the available cryptocurrencies",
+    "withdrawAmount": "Withdrawal Amount (USDT)",
+    "sendTransaction": "Send Transaction",
+    "receivableAmount": "Your Receivable Amount:"
+  },
+
+  "trader": {
+    "title": "Trader Panel",
+    "selectToken": {
+      "title": "Select a token to trade:",
+      "token": "Token",
+      "balance": "Balance",
+      "buyPrice": "Buy Price",
+      "sellPrice": "Sell Price",
+      "balanceValue": "Balance Value"
+    },
+    "buy": {
+      "title": "Buy",
+      "tokenName": "Token Name",
+      "usdtAmount": "USDT Amount",
+      "buyPrice": "Buy Price",
+      "slippage": "Slippage",
+      "minTokenAmount": "Min Token Amount",
+      "buyButton": "Buy"
+    },
+    "sell": {
+      "title": "Sell",
+      "tokenName": "Token Name",
+      "tokenAmount": "Token Amount",
+      "sellPrice": "Sell Price",
+      "slippage": "Slippage",
+      "minUsdtAmount": "Min USDT Amount",
+      "sellButton": "Sell"
+    }
+  }
 }
