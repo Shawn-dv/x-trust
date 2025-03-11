@@ -1,0 +1,1099 @@
+[
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "_userId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "_usdtAmount",
+				"type": "uint256"
+			}
+		],
+		"name": "Invested",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "_tokenId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "_usdtGiven",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "_tokenReceived",
+				"type": "uint256"
+			}
+		],
+		"name": "TokenBought",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "_tokenId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "_tokenGiven",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "_usdtReceived",
+				"type": "uint256"
+			}
+		],
+		"name": "TokenSold",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "_userId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "_usdtAmount",
+				"type": "uint256"
+			}
+		],
+		"name": "Withdrew",
+		"type": "event"
+	},
+	{
+		"inputs": [],
+		"name": "amIMember",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "amIOwner",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "amITrader",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address payable",
+				"name": "_owner",
+				"type": "address"
+			}
+		],
+		"name": "changeOwner",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address payable",
+				"name": "_trader",
+				"type": "address"
+			}
+		],
+		"name": "changeTrader",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint8",
+				"name": "_type",
+				"type": "uint8"
+			}
+		],
+		"name": "getFactor",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "_factor",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_currentValue",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getFactorAvg",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "_factor",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_currentValue",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getFinished",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "_finished",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getMaxWithdrawable",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "_maxWithdrawable",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_factor",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getMyInfo",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "initialFactor",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "lastFactor",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalInvestment",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalWithdraw",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "equivalentInitialInvest",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "equivalentFinalWithdraw",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "txCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "referrerId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "referralsCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "referralsInvestSum",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "referralsWithdrawSum",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "finalSettlement",
+						"type": "bool"
+					}
+				],
+				"internalType": "struct Data.UserInfo",
+				"name": "_user",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_txId",
+				"type": "uint256"
+			}
+		],
+		"name": "getMyTx",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "time",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "factor",
+						"type": "uint256"
+					},
+					{
+						"internalType": "int256",
+						"name": "txValue",
+						"type": "int256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fee",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Data.Tx",
+				"name": "_tx",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getMyTxs",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "time",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "factor",
+						"type": "uint256"
+					},
+					{
+						"internalType": "int256",
+						"name": "txValue",
+						"type": "int256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fee",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Data.Tx[]",
+				"name": "_txs",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getOwner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint8",
+				"name": "_tokenId",
+				"type": "uint8"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_tokenAmount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint8",
+				"name": "_type",
+				"type": "uint8"
+			}
+		],
+		"name": "getPrice",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "_price",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_usdtAmount",
+				"type": "uint256"
+			}
+		],
+		"name": "getReceivedValue",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "_usdtReceived",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getSwaps",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "swapAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint8",
+						"name": "version",
+						"type": "uint8"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"internalType": "struct Data.Swap[]",
+				"name": "_swaps",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getSystemInfo",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "_usersCount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_usdtAmountIn",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_usdtAmountOut",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_equivalentValue",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_feeBalance",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_feeSum",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_factor",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint8",
+				"name": "_tokenId",
+				"type": "uint8"
+			},
+			{
+				"internalType": "uint8",
+				"name": "_type",
+				"type": "uint8"
+			}
+		],
+		"name": "getTokenPrice",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "_price",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getTokens",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "tokenAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "balance",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "swapId",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8",
+						"name": "decimals",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8",
+						"name": "priceUnit",
+						"type": "uint8"
+					}
+				],
+				"internalType": "struct Data.Token[]",
+				"name": "_tokens",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getTokensBuyPrice",
+		"outputs": [
+			{
+				"internalType": "uint256[]",
+				"name": "_price",
+				"type": "uint256[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getTokensSellPrice",
+		"outputs": [
+			{
+				"internalType": "uint256[]",
+				"name": "_price",
+				"type": "uint256[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getTrader",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getUsdt",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "tokenAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "balance",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "swapId",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8",
+						"name": "decimals",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8",
+						"name": "priceUnit",
+						"type": "uint8"
+					}
+				],
+				"internalType": "struct Data.Token",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getUsdtBalance",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "_balance",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_userAddress",
+				"type": "address"
+			}
+		],
+		"name": "getUserInfo",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "initialFactor",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "lastFactor",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalInvestment",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalWithdraw",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "equivalentInitialInvest",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "equivalentFinalWithdraw",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "txCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "referrerId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "referralsCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "referralsInvestSum",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "referralsWithdrawSum",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "finalSettlement",
+						"type": "bool"
+					}
+				],
+				"internalType": "struct Data.UserInfo",
+				"name": "_user",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_userId",
+				"type": "uint256"
+			}
+		],
+		"name": "getUserInfoById",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "initialFactor",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "lastFactor",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalInvestment",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalWithdraw",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "equivalentInitialInvest",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "equivalentFinalWithdraw",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "txCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "referrerId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "referralsCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "referralsInvestSum",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "referralsWithdrawSum",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "finalSettlement",
+						"type": "bool"
+					}
+				],
+				"internalType": "struct Data.UserInfo",
+				"name": "_user",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_userAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_txId",
+				"type": "uint256"
+			}
+		],
+		"name": "getUserTx",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "time",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "factor",
+						"type": "uint256"
+					},
+					{
+						"internalType": "int256",
+						"name": "txValue",
+						"type": "int256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fee",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Data.Tx",
+				"name": "_tx",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_usdtAmount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_referrerId",
+				"type": "uint256"
+			}
+		],
+		"name": "invest",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint8",
+				"name": "_tokenId",
+				"type": "uint8"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_tokenAmount",
+				"type": "uint256"
+			}
+		],
+		"name": "ownerWithdraw",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "payEth",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_tokenAddress",
+				"type": "address"
+			}
+		],
+		"name": "payMe",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_tokenAddress",
+				"type": "address"
+			}
+		],
+		"name": "payUnpermittedToken",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "setFinished",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint8",
+				"name": "_tokenId",
+				"type": "uint8"
+			},
+			{
+				"internalType": "uint8",
+				"name": "_priceUnit",
+				"type": "uint8"
+			}
+		],
+		"name": "setTokenPriceUnit",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_userId",
+				"type": "uint256"
+			}
+		],
+		"name": "settleUser",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint8",
+				"name": "_tokenId",
+				"type": "uint8"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_usdtAmount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_tokenAmountMin",
+				"type": "uint256"
+			}
+		],
+		"name": "traderBuyToken",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint8",
+				"name": "_tokenId",
+				"type": "uint8"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_tokenAmount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_usdtAmountMin",
+				"type": "uint256"
+			}
+		],
+		"name": "traderSellToken",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint8",
+				"name": "_tokenId",
+				"type": "uint8"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_tokenAmount",
+				"type": "uint256"
+			}
+		],
+		"name": "traderWithdraw",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_usdtAmount",
+				"type": "uint256"
+			}
+		],
+		"name": "withdraw",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bool",
+				"name": "_usdtOnly",
+				"type": "bool"
+			}
+		],
+		"name": "withdrawAll",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
